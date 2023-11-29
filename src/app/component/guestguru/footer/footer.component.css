@@ -1,0 +1,15 @@
+footer{
+	background-color: #000099;
+    position: relative;
+	bottom: 0;
+	left:0;
+	right:0;
+	height: auto;
+    width: 100%;
+	color: white;
+}
+.text-reset:hover{
+	padding: 5px;
+	background-color: #000070;
+
+}

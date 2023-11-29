@@ -1,0 +1,39 @@
+.container-fluid{
+    height: auto;
+    width: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.display-1{
+    font-style: oblique;
+}
+/* Define the button styles */
+   .responsive-button {
+    background-color: #000099;
+    color: #fff;
+    width: 180px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Style for the arrow icon*/
+.arrow-icon {
+  
+    top: 50%;
+    right: 10px;
+    padding: 15px;
+    transform: translateY(-50%);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+}
+/* Show the arrow icon on hover*/
+.responsive-button:hover .arrow-icon {
+    opacity: 2;
+}
+.responsive-button:hover{
+    background-color: #000070;
+    
+    box-shadow: 5px 10px 18px #3399ec;
+
+}

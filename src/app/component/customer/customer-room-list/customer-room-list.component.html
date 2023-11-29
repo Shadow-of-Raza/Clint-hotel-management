@@ -1,0 +1,78 @@
+<div class="container-fluid py-5" id="box" style="background-image: url('../../../../assets/p1.jpg'); background-repeat: no-repeat; background-size: cover;">
+  <div class="container border w-75  p-4  bg-light">
+   
+ 
+     
+
+     <div class="domain-search" id="body">
+       <div class="row">
+         <div class="col-md-3">
+           <h2 class="form-title">Find Your <strong>Comfortable Room</strong></h2>
+           <p class="dream">Search for your dream room Now</p>
+         </div>
+         <div class="col-md-9">
+           
+           <div class="m-3">
+             <label for="roomCategory">Select Your Category</label>
+             <select class="form-select w-50" id="roomCategory" name="roomCategory" [(ngModel)]="roomcategoryid" (ngModelChange)="searchRooms()">
+               <option value="" disabled selected>Select your category</option>
+               <option *ngFor="let category of categories" [value]="category.roomcategoryid" >{{ category.roomcategoryname }}</option>
+             </select>
+           </div>
+           
+           <p class="statement"><i class="fas fa-search"></i>&nbsp;&nbsp; Search your rooms using categories...</p>
+         </div>
+       </div>
+     </div>
+   
+
+   <div *ngFor="let room of roomInformation | slice: (page - 1) * pageSize : page * pageSize" class="m-3">
+       <div class="card">
+           <div class="row">
+            <div class="col-8 ">
+             <div class="mt-2">
+               <div class="row ml-2 ">
+                 <h3>{{hotelname}}</h3>
+                 <p> <i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;{{hotellocation}}</p>
+               </div>
+               <div class="row ml-2 ">
+                 <p>{{room.roomdescription}}</p>
+               </div>
+               <div class="row ml-2 ">
+                 <div class="col-3 " style="border-left: 1px solid gray;">
+                     <strong style="font-size: 12px;">Room Category:</strong> 
+                     <p class="pl-3" style="font-size: 10px;">{{room.roomcategory.roomcategoryname}} <br></p>
+                     <p style="margin-top: -20px;"> <strong  style="font-size: 12px; margin-top: -5px; padding-left: -8px;">Room Services:</strong></p>
+                     <div *ngFor="let service of room.roomservice">
+                       <ul>
+                         <li style="margin: -15px; font-size: 10px;">{{service.roomservicename}}</li>
+                       </ul>
+                     </div>
+                 </div>
+                 <div class="col " style="text-align: end;">
+                   <div class="row pt-3">
+                     <strong>  <p style="font-size: 13px;">{{room.numberofpeople}} <i class="fa fa-users pl-3"></i> </p></strong>
+                   </div>
+                   <div class="row">
+                   <strong>  <p style="font-size: 20px;">Rs. {{room.roompriceperday}} /- Per Day</p></strong>
+                   </div>
+                   <div class="row">
+                     <div >
+                       <button class="btn" style="background-color: #000090; color: white;" (click)="makebooking(hotelname,room.roompriceperday,room.numberofpeople,hotellocation,room.roomdescription,room.roomimageurl,room.roomid)" >Book Now</button>
+                     </div>
+                   </div>
+                 </div>
+                 
+               </div>
+           
+             </div>
+           </div>
+            <div class="col-4 ">
+             <img [src]="room.roomimageurl" class="img-fluid" style="height: 320px; width: 455px;">
+            </div>
+           </div>
+         </div>
+       </div>
+       <mat-paginator [length]="roomInformation.length" [pageSize]="pageSize" (page)="pageEvent($event)"></mat-paginator>
+   </div>
+ </div>

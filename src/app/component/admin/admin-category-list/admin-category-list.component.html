@@ -1,0 +1,25 @@
+<div class="container-fluid py-5" style="background-image: url('../../../../assets/p1.jpg'); background-repeat: no-repeat; background-size: cover;">
+  <div class="container p-4 bg-light w-50 border rounded">
+    <div>
+      <h2>Room Categories</h2>
+    </div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Room Category ID</th>
+          <th scope="col">Room Category Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let room of roomcategory | slice: (page - 1) * pageSize : page * pageSize">
+          <td>{{ room.roomcategoryid }}</td>
+          <td>{{ room.roomcategoryname }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <mat-paginator [length]="roomcategory.length" [pageSize]="pageSize" (page)="pageEvent($event)"></mat-paginator>
+    <div class="row">
+      <button class="btn btn-sm w-25 btn-primary ml-3" (click)="addRoomCategory()">Add</button>
+    </div>
+  </div>
+</div>
