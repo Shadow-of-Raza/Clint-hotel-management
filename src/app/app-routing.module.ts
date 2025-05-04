@@ -27,14 +27,11 @@ import { AdminHoteladminListComponent } from './component/admin/admin-hoteladmin
 import { AdminRouteGaurdService } from './service/admin-route-gaurd.service';
 import { CustomerListComponent } from './component/customer/customer-list/customer-list.component';
 import { CustomerBookingComponent } from './component/customer/customer-booking/customer-booking.component';
-
-import { CustomerLogoutComponent } from './component/customer/customer-logout/customer-logout.component';
 import { CustomerRouteGaurdService } from './service/customer-route-gaurd.service';
 import { HoteladminHotelListComponent } from './component/hoteladmin/hoteladmin-hotel-list/hoteladmin-hotel-list.component';
 import { HoteladminRoomListComponent } from './component/hoteladmin/hoteladmin-room-list/hoteladmin-room-list.component';
 import { HoteladminLogoutComponent } from './component/hoteladmin/hoteladmin-logout/hoteladmin-logout.component';
 import { HoteladminCustomerBookingComponent } from './component/hoteladmin/hoteladmin-customer-booking/hoteladmin-customer-booking.component';
-
 import { HoteladminRouteGaurdService } from './service/hoteladmin-route-gaurd.service';
 import { HoteladminUpdateComponent } from './component/hoteladmin/hoteladmin-update/hoteladmin-update.component';
 import { CustomerUpdateComponent } from './component/customer/customer-update/customer-update.component';

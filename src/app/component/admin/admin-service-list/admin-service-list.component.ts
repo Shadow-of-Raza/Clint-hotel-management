@@ -1,7 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatPaginator } from '@angular/material/paginator';
 import { RoomService } from 'src/app/Entity/room-service';
 import { DataService } from 'src/app/service/data.service';
 

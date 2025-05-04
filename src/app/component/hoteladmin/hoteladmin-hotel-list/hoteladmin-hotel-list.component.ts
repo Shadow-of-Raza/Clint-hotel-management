@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { HotelInformation } from 'src/app/Entity/hotel-information';
 
 import { DataService } from 'src/app/service/data.service';
-import { DOCUMENT } from '@angular/common';
+
 
 @Component({
   selector: 'app-hoteladmin-hotel-list',

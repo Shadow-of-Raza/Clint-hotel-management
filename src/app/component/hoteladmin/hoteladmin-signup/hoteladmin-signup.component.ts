@@ -17,12 +17,17 @@ export class HoteladminSignupComponent {
     hoteladminphonenumber: '',
     hoteladminpassword: ''
   };
+  otp: string;
+  enteredOtp: string;
+
+  errorvatify:boolean=false;
+  otpvarify: boolean = false;
   isDisable:boolean=false;
   isOTPDisable:boolean=false;
-  otpvarify: boolean = false;
-  enteredOtp: string;
-  otp: string;
-  errorvatify:boolean=false;
+
+
+
+ 
 
   
   constructor(private dataService: DataService, private router: Router,private http:HttpClient) { }
@@ -45,6 +50,7 @@ export class HoteladminSignupComponent {
         if (error.status === 400) {
           // Handle specific error scenarios for a 400 response
           alert('Registration Failed: Invalid data provided.');
+          // reset form
         } else {
           // Handle other error scenarios
           alert('Registration Failed: An error occurred.');

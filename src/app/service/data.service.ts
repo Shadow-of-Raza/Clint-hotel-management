@@ -18,6 +18,7 @@ export class DataService {
   
   constructor(private http: HttpClient) {}
 
+  // var 
   //Admin Related API's
 
   sendEmailToAdmin(formData: any){
@@ -75,9 +76,6 @@ export class DataService {
   getAllRoomService(){
     return this.http.get<RoomService[]>(`http://localhost:8080/getAllRoomService`);
   }
-
-
-
 
   deleteRoomServiceById(roomserviceid:number){
   return this.http.delete<RoomService[]>(`http://localhost:8080/deleteRoomServiceById/${roomserviceid}`);

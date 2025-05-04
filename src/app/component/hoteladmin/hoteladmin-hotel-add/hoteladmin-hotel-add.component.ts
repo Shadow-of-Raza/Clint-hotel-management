@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HotelInformation } from 'src/app/Entity/hotel-information';
-import { AuthService } from 'src/app/service/auth.service';
 import { DataService } from 'src/app/service/data.service';
 
 @Component({

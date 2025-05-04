@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { BookingInformation } from 'src/app/Entity/booking-information';
 import { DataService } from 'src/app/service/data.service';
 
 declare var Razorpay:any;

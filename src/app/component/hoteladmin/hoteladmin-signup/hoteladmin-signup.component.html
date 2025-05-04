@@ -91,14 +91,7 @@
           <div class="mb-3" align="center">
             <p id="message-otp">*Please check your email for OTP validation.</p>
             <label for="hoteladminotp" class="form-label">Enter OTP</label>
-            <input
-  type="text"
-  class="form-control"
-  id="otp"
-  name="otp"
-  [(ngModel)]="otp"
-  required
-/>
+            <input type="text" class="form-control" id="otp" name="otp" [(ngModel)]="otp" required />
             <button type="submit" [disabled]="isOTPDisable"  class="btn btn-primary mt-2">Verify OTP</button>
           </div>
         </div>

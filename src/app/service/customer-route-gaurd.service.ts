@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
 import { CustomerHardCodedAuthenticationService } from './customer-hard-coded-authentication.service';
 
 @Injectable({

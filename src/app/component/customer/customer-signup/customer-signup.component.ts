@@ -82,12 +82,15 @@ export class CustomerSignupComponent {
   }
   showNumberErrorMessage = false;   
   validateNameInput() {
+
     const inputValue = this.customer.customername; 
     // Use a regular expression to check if the input contains numbers
     const numberRegex = /\d+/;
     const hasNumbers = numberRegex.test(inputValue); 
     // Update the flag based on whether numbers are found
     this.showNumberErrorMessage = hasNumbers;
+    
+
   }
 
 

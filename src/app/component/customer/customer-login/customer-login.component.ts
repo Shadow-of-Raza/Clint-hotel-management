@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Customer } from 'src/app/Entity/customer';
-import { AuthService } from 'src/app/service/auth.service';
 import { DataService } from 'src/app/service/data.service';
 
 @Component({
@@ -21,7 +20,6 @@ export class CustomerLoginComponent {
   constructor(
     private dataService:DataService, 
     private router:Router,
-    private authService: AuthService
     ){}
   
   onSubmit(customerForm:NgForm){

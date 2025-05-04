@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { HotelAdmin } from 'src/app/Entity/hotel-admin';
 import { DataService } from 'src/app/service/data.service';
 

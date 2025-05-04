@@ -44,7 +44,6 @@ import { TermsAndConditionsComponent } from './component/guestguru/terms-and-con
 import { CustomerBookingComponent } from './component/customer/customer-booking/customer-booking.component';
 import { HoteladminCustomerBookingComponent } from './component/hoteladmin/hoteladmin-customer-booking/hoteladmin-customer-booking.component';
 import { FormsModule } from '@angular/forms';
-import { NgxPaginationModule } from 'ngx-pagination';
 import { CommonModule } from '@angular/common';
 import { AdminCustomerListComponent } from './component/admin/admin-customer-list/admin-customer-list.component';
 import { AdminHotelstatusUpdateComponent } from './component/admin/admin-hotelstatus-update/admin-hotelstatus-update.component';
@@ -123,7 +122,6 @@ import { HoteladminProfileUpdateComponent } from './component/hoteladmin/hotelad
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgxPaginationModule,
     CommonModule,
     HttpClientModule,
     MatPaginatorModule
@@ -132,3 +130,22 @@ import { HoteladminProfileUpdateComponent } from './component/hoteladmin/hotelad
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
+/**
+
+BrowserModule: This module is required for running your Angular application in a web browser. It provides essential services and directives that enable Angular to run in a browser environment.
+
+AppRoutingModule: This module is used for setting up routing in your Angular application. It allows you to define routes for different components and navigate between them based on user actions or application state changes.
+
+FormsModule: FormsModule is a module that provides support for creating forms in Angular applications. It includes directives and services that enable two-way data binding and form validation, making it easier to work with user input and data submission.
+
+CommonModule: CommonModule provides commonly used directives like ngIf, ngFor, etc., along with other utilities that are helpful when building Angular components and templates. It's typically imported in feature modules to gain access to these common directives and utilities.
+
+HttpClientModule: HttpClientModule is used for making HTTP requests in Angular applications. It provides the HttpClient service, which allows you to fetch data from remote servers or interact with APIs over the HTTP protocol.
+
+MatPaginatorModule: MatPaginatorModule is part of Angular Material, a UI component library. MatPaginatorModule specifically provides the pagination feature, allowing you to split large sets of data into multiple pages for easier navigation and viewing in your application.
+ 
+
+*/

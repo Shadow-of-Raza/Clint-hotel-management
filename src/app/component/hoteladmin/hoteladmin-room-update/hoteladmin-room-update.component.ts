@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { HotelInformation } from 'src/app/Entity/hotel-information';
-import { RoomInformation } from 'src/app/Entity/room-information';
 import { DataService } from 'src/app/service/data.service';
 
 @Component({
